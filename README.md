@@ -42,7 +42,11 @@ The tasks are both applicable for English and Russian probing tasks, covering su
 ## Setup & Usage 
 
 ### Installation
-TBA
+```
+git clone https://github.com/RussianNLP/rusenteval/
+cd rusenteval
+sh install_tools.sh
+```
 ### Usage
 TBA
 
