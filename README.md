@@ -25,10 +25,12 @@ Our results provide intriguing findings that contradict the common understanding
 
 
 ![pic1](/images/Screenshot%20from%202021-03-03%2023-16-21.png)
+
 The probing results for each encoder on NShift (Ru) task. 
 X-axis=Layer index number, Y-axis=Accuracy score.
 
 ![pic2](/images/Screenshot%20from%202021-03-03%2023-16-32.png)
+
 The distribution of top neurons over SentLen tasks for both languages: Ru=Russian, En=English. Xaxis=Layer index number, Y-axis=Number of neurons selected from the layer.
 
 ## Tasks
