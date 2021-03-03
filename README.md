@@ -9,7 +9,8 @@ RuSentEval, an enhanced set of 14 probing tasks for Russian, including ones that
 
 Our results provide intriguing findings that contradict the common understanding of how linguistic knowledge is represented, and demonstrate that some properties are learned in a similar manner despite the language differences.
 
-![GitHub Logo](/images/logo.png)
+![pic1](/images/Screenshot%20from%202021-03-03%2023-16-32.png)
+The distribution of top neurons over SentLen tasks for both languages: Ru=Russian, En=English. Xaxis=Layer index number, Y-axis=Number of neurons selected from the layer.
 
 ## Setup & Usage 
 
@@ -33,4 +34,4 @@ The paper is accepted to BSNLP workshop at EACL 2021.
 ```
 [arxiv link](https://arxiv.org/abs/2103.00573v2)
 
-![GitHub Logo](/images/logo.png)
+![paper preview](/images/Screenshot%20from%202021-03-03%2023-20-03.png)
