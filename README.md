@@ -64,5 +64,3 @@ The paper is accepted to BSNLP workshop at EACL 2021.
 }
 ```
 [arxiv link](https://arxiv.org/abs/2103.00573v2)
-
-![paper preview](/images/Screenshot%20from%202021-03-03%2023-20-03.png)
