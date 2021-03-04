@@ -11,10 +11,12 @@ Our results provide intriguing findings that contradict the common understanding
 
 ## Tested Models and Results
 
+The code is compatible with models released as a part of HuggingFace library.
+
 ### Russian Models:
-1. **RuBert** (Kuratov, Arkhipov, 2019) RuBERT by DeepPavlov (Russian, cased, 12‑layer, 768‑hidden, 12‑heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. 
-2. **RuBert Sentence** Sentence RuBERT by DeepPavlov (Russian, cased, 12-layer, 768-hidden, 12-heads, 180M parameters) is a representation‑based sentence encoder for Russian. It is initialized with RuBERT and fine‑tuned on SNLI google-translated to russian and on russian part of XNLI dev set. Sentence representations are mean pooled token embeddings in the same manner as in Sentence‑BERT.
-3. **RuBert Conversational**  Conversational RuBERT by DeepPavlov (Russian, cased, 12‑layer, 768‑hidden, 12‑heads, 180M parameters) was trained on OpenSubtitles, Dirty, Pikabu, and a Social Media segment of Taiga corpus.
+1. **RuBERT** (Kuratov, Arkhipov, 2019) RuBERT by DeepPavlov (Russian, cased, 12‑layer, 768‑hidden, 12‑heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. 
+2. **Sentence RuBERT** Sentence RuBERT by DeepPavlov (Russian, cased, 12-layer, 768-hidden, 12-heads, 180M parameters) is a representation‑based sentence encoder for Russian. It is initialized with RuBERT and fine‑tuned on SNLI google-translated to russian and on russian part of XNLI dev set. Sentence representations are mean pooled token embeddings in the same manner as in Sentence‑BERT.
+3. **Conversational RuBERT**  Conversational RuBERT by DeepPavlov (Russian, cased, 12‑layer, 768‑hidden, 12‑heads, 180M parameters) was trained on OpenSubtitles, Dirty, Pikabu, and a Social Media segment of Taiga corpus.
 
 ### Multilingual Models:
 1. **M-BERT** (Devlin et al., 2019) is trained on masked language modeling (MLM) and next sentence prediction tasks, over concatenated monolingual Wikipedia corpora in 104 languages.
