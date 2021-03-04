@@ -54,7 +54,7 @@ TBA
 
 ## Cite us
 
-The paper is accepted to BSNLP workshop at EACL 2021. 
+The [paper](https://arxiv.org/abs/2103.00573v2) is accepted to BSNLP workshop at EACL 2021. 
 ```
 @misc{mikhailov2021rusenteval,
       title={RuSentEval: Linguistic Source, Encoder Force!}, 
@@ -65,4 +65,3 @@ The paper is accepted to BSNLP workshop at EACL 2021.
       primaryClass={cs.CL}
 }
 ```
-[arxiv link](https://arxiv.org/abs/2103.00573v2)
