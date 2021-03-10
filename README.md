@@ -52,6 +52,9 @@ sh install_tools.sh
 ### Usage
 TBA
 
+## Data
+We publicly release the [sentences](https://disk.yandex.ru/d/78FfMVzLPECteQ) that were used to construct the probing tasks. The sentences were annotated with the current [SOTA](https://github.com/DanAnastasyev/GramEval2020) model for joint morphosyntactic analysis for Russian. The total number of sentences is 3.6kk. The filtering procedure is described in our paper.
+
 ## Cite us
 
 The [paper](https://arxiv.org/abs/2103.00573v2) is accepted to BSNLP workshop at EACL 2021. 
