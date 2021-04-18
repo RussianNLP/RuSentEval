@@ -57,7 +57,8 @@ We publicly release the [sentences](https://disk.yandex.ru/d/78FfMVzLPECteQ) tha
 
 ## Cite us
 
-The [paper](https://arxiv.org/abs/2103.00573v2) is accepted to BSNLP workshop at EACL 2021. 
+The [paper](https://arxiv.org/abs/2103.00573v2) is accepted to BSNLP workshop at EACL 2021. The title follows Power Rangers Mystic Force series (Roll Call Team-Morph: "Magical Source, Mystic Force!")
+
 ```
 @misc{mikhailov2021rusenteval,
       title={RuSentEval: Linguistic Source, Encoder Force!}, 
