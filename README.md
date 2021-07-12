@@ -9,8 +9,23 @@ RuSentEval, an enhanced set of 14 probing tasks for Russian, including ones that
 
 Our results provide intriguing findings that contradict the common understanding of how linguistic knowledge is represented, and demonstrate that some properties are learned in a similar manner despite the language differences.
 
-## Tested Models and Results
 
+## Probing Tasks
+The main body of paper presents the results for English and Russian tasks, covering surface properties 
+(SentLen, WC), syntax (TreeDepth, NShift), and semantics (ObjNumber, SubjNumber, and Tense). 
+
+![pic3](/images/Screenshot%20from%202021-03-03%2023-15-47.png)
+
+
+## Data
+We publicly release the [sentences](https://disk.yandex.ru/d/78FfMVzLPECteQ) that were used to construct the probing tasks. The sentences were annotated with the current [SOTA](https://github.com/DanAnastasyev/GramEval2020) model for joint morphosyntactic analysis for Russian. The total number of sentences is 3.6kk. The filtering procedure is described in our paper.
+
+## Probing Methods
+* [Supervised probing](https://github.com/RussianNLP/rusenteval/tree/main/probing) involves training a Logistic Regression classifier to predict a property. The performance is used as a proxy to evaluate the model knowledge.
+* [Neuron-level Analysis](https://github.com/fdalvi/NeuroX) [Durrani et al., 2020] allows retrieving a group of individual neurons that are most relevant to predict a linguistic property.
+* [Contextual Correlation Analysis](https://github.com/johnmwu/contextual-corr-analysis/tree/master) [Wu et al., 2020] is a representation-level similarity measure that allows identifying pairs of layers of similar behavior. 
+
+## Tested Models and Results
 The code is compatible with models released as a part of HuggingFace library.
 
 ### Russian Models:
@@ -35,14 +50,7 @@ X-axis=Layer index number, Y-axis=Accuracy score.
 
 The distribution of top neurons over SentLen tasks for both languages: Ru=Russian, En=English. Xaxis=Layer index number, Y-axis=Number of neurons selected from the layer.
 
-## Tasks
-The main body of paper presents the results for English and Russian tasks, covering surface properties 
-(SentLen, WC), syntax (TreeDepth, NShift), and semantics (ObjNumber, SubjNumber, and Tense). 
-
-![pic3](/images/Screenshot%20from%202021-03-03%2023-15-47.png)
-
 ## Setup & Usage 
-
 ### Installation
 ```
 git clone https://github.com/RussianNLP/rusenteval/
@@ -50,13 +58,47 @@ cd rusenteval
 sh install_tools.sh
 ```
 ### Usage
-TBA
+#### Example: Baseline
+```
+from probing.arguments import ProbingArguments
+from probing.baseline import Baseline
 
-## Data
-We publicly release the [sentences](https://disk.yandex.ru/d/78FfMVzLPECteQ) that were used to construct the probing tasks. The sentences were annotated with the current [SOTA](https://github.com/DanAnastasyev/GramEval2020) model for joint morphosyntactic analysis for Russian. The total number of sentences is 3.6kk. The filtering procedure is described in our paper.
+
+args = ProbingArguments()
+
+# args.clf == "logreg" or args.clf == "mlp" for linear/non-linear classification
+args.clf = "logreg"
+
+# for imbalanced datasets (gapping, tree_depth)
+args.balanced = False
+
+tasks = ["gapping"]
+
+# define the baseline features to run
+baseline = Baseline(args, tasks, baseline_features=["tfidf_word"])
+baseline.run()
+```
+
+
+#### Example: Experiment (Supervised probing)
+```
+from probing.arguments import ProbingArguments
+from probing.experiment import Experiment
+
+
+tasks = ["sent_len", "subj_number"]
+# name of the HuggingFace model; you can adjust the code for your model
+model = "bert-base-multilingual-cased"
+args = ProbingArguments()
+
+# args.clf == "logreg" or args.clf == "mlp" for linear/non-linear classification
+args.clf = "mlp"
+
+experiment = Experiment(tasks, model, args)
+experiment.run()
+```
 
 ## Cite us
-
 The [paper](https://arxiv.org/abs/2103.00573v2) is accepted to BSNLP workshop at EACL 2021. The title follows Power Rangers Mystic Force series (Roll Call Team-Morph: "Magical Source, Mystic Force!")
 
 ```
