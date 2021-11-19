@@ -102,12 +102,19 @@ experiment.run()
 The [paper](https://arxiv.org/abs/2103.00573v2) is accepted to BSNLP workshop at EACL 2021. The title follows Power Rangers Mystic Force series (Roll Call Team-Morph: "Magical Source, Mystic Force!")
 
 ```
-@misc{mikhailov2021rusenteval,
-      title={RuSentEval: Linguistic Source, Encoder Force!}, 
-      author={Vladislav Mikhailov and Ekaterina Taktasheva and Elina Sigdel and Ekaterina Artemova},
-      year={2021},
-      eprint={2103.00573},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{mikhailov-etal-2021-rusenteval,
+    title = "{R}u{S}ent{E}val: Linguistic Source, Encoder Force!",
+    author = "Mikhailov, Vladislav  and
+      Taktasheva, Ekaterina  and
+      Sigdel, Elina  and
+      Artemova, Ekaterina",
+    booktitle = "Proceedings of the 8th Workshop on Balto-Slavic Natural Language Processing",
+    month = apr,
+    year = "2021",
+    address = "Kiyv, Ukraine",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.bsnlp-1.6",
+    pages = "43--65",
+    abstract = "The success of pre-trained transformer language models has brought a great deal of interest on how these models work, and what they learn about language. However, prior research in the field is mainly devoted to English, and little is known regarding other languages. To this end, we introduce RuSentEval, an enhanced set of 14 probing tasks for Russian, including ones that have not been explored yet. We apply a combination of complementary probing methods to explore the distribution of various linguistic properties in five multilingual transformers for two typologically contrasting languages {--} Russian and English. Our results provide intriguing findings that contradict the common understanding of how linguistic knowledge is represented, and demonstrate that some properties are learned in a similar manner despite the language differences.",
 }
 ```
